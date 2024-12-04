@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Tela de cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tela de Cadastro</h1>
+        <nav>
+            <button onclick="mostrarTela('clientes')">Cadastro de Clientes</button>
+            <button onclick="mostrarTela('produtos')">Cadastro de Produtos</button>
+            <button onclick="mostrarTela('fornecedores')">Cadastro de Fornecedores</button>
+            <button onclick="mostrarTela('funcionarios')">Cadastro de Funcionários</button>
+            <button onclick="mostrarTela('bancos')">Dados bancários para o pagamento</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="clientes" class="tela">
+            <h2>Cadastro de Clientes</h2>
+            <form id="formClientes">
+                <label for="nomeCliente">Nome:</label>
+                <input type="text" id="nomeCliente" placeholder="Digite o nome" required>
+
+                <label for="emailCliente">E-mail:</label>
+                <input type="email" id="emailCliente" placeholder="Digite o e-mail" required>
+
+                <label for="telefoneCliente">Telefone:</label>
+                <input type="tel" id="telefoneCliente" placeholder="Digite o telefone" required>
+
+                <button type="button" onclick="adicionarCliente()">Adicionar Cliente</button>
+            </form>
+            <ul id="listaClientes"></ul>
+        </section>
+
+        <section id="produtos" class="tela" style="display: none;">
+            <h2>Cadastro de Produtos</h2>
+            <form id="formProdutos">
+                <label for="nomeProduto">Nome:</label>
+                <input type="text" id="nomeProduto" placeholder="Digite o nome do produto" required>
+
+                <label for="categoriaProduto">Categoria:</label>
+                <input type="text" id="categoriaProduto" placeholder="Digite a categoria" required>
+
+                <label for="precoProduto">Preço:</label>
+                <input type="number" id="precoProduto" placeholder="Digite o preço" step="0.01" required>
+
+                <button type="button" onclick="adicionarProduto()">Adicionar Produto</button>
+            </form>
+            <ul id="listaProdutos"></ul>
+        </section>
+
+        <section id="fornecedores" class="tela" style="display: none;">
+            <h2>Cadastro de Fornecedores</h2>
+            <form id="formFornecedores">
+                <label for="nomeFornecedor">Nome:</label>
+                <input type="text" id="nomeFornecedor" placeholder="Digite o nome do fornecedor" required>
+
+                <label for="emailFornecedor">E-mail:</label>
+                <input type="email" id="emailFornecedor" placeholder="Digite o e-mail" required>
+
+                <label for="telefoneFornecedor">Telefone:</label>
+                <input type="tel" id="telefoneFornecedor" placeholder="Digite o telefone" required>
+
+                <button type="button" onclick="adicionarFornecedor()">Adicionar Fornecedor</button>
+            </form>
+            <ul id="listaFornecedores"></ul>
+        </section>
+
+        <section id="funcionarios" class="tela" style="display: none;">
+            <h2>Cadastro de Funcionários</h2>
+            <form id="formFuncionarios">
+                <label for="nomeFuncionario">Nome:</label>
+                <input type="text" id="nomeFuncionario" placeholder="Digite o nome do funcionário" required>
+
+                <label for="emailFuncionario">E-mail:</label>
+                <input type="email" id="emailFuncionario" placeholder="Digite o e-mail" required>
+
+                <label for="telefoneFuncionario">Telefone:</label>
+                <input type="tel" id="telefoneFuncionario" placeholder="Digite o telefone" required>
+
+                <button type="button" onclick="adicionarFuncionario()">Adicionar Funcionário</button>
+            </form>
+            <ul id="listaFuncionarios"></ul>
+        </section>
+
+        <section id="bancos" class="tela" style="display: none;"> 
+            <h2>Dados Bancários para o pagamento</h2> 
+            <form id="formBancos"> 
+                <label for="nomeBanco">Nome completo ou razão social do(a) beneficiário(a):</label> 
+                <input type="text" id="nomeBanco" placeholder="Digite o nome completo ou razão social" required> 
+                
+                <label for="numeroConta">Número da conta:</label> 
+                <input type="text" id="numeroConta" placeholder="Digite o número da conta" required> 
+                
+                <label for="instituicao">Instituição financeira:</label> 
+                <select id="instituicao" required> 
+                    <option value="">Selecione um banco</option> 
+                    <option value="CAIXA">CAIXA</option> 
+                    <option value="Bradesco">Bradesco</option> 
+                    <option value="Banco do Brasil">Banco do Brasil</option> 
+                    <option value="Itaú">Itaú</option> 
+                    <option value="Santander">Santander</option>  
+                    </select> 
+                    
+                    <label for="cpfCnpj">CPF/CNPJ:</label> 
+                    <input type="text" id="cpfCnpj" placeholder="Digite o CPF ou CNPJ" required> 
+                    
+                    <label for="valorPagamento">Valor do pagamento (R$):</label> 
+                    <input type="number" id="valorPagamento" placeholder="Digite o valor do pagamento" step="0.01" required> 
+                    
+                    <button type="button" onclick="adicionarBanco()">Adicionar Dados Bancários</button> 
+                </form> 
+                <ul id="listaBancos"></ul>
+            </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
