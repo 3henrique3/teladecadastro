@@ -15,7 +15,7 @@ function adicionarCliente() {
 
     const listaClientes = document.getElementById("listaClientes");
     const item = document.createElement("li");
-    item.textContent = Nome: ${nome}, E-mail: ${email}, Telefone: ${telefone};
+    item.textContent = `Nome: ${nome}, E-mail: ${email}, Telefone: ${telefone}`;
     listaClientes.appendChild(item);
 
     document.getElementById("formClientes").reset();
@@ -34,7 +34,7 @@ function adicionarProduto() {
 
     const listaProdutos = document.getElementById("listaProdutos");
     const item = document.createElement("li");
-    item.textContent = Produto: ${nome}, Categoria: ${categoria}, Preço: R$ ${parseFloat(preco).toFixed(2)};
+    item.textContent = `Produto: ${nome}, Categoria: ${categoria}, Preço: R$ ${parseFloat(preco).toFixed(2)}`;
     listaProdutos.appendChild(item);
 
     document.getElementById("formProdutos").reset();
@@ -53,7 +53,7 @@ function adicionarFornecedor() {
 
     const listaFornecedores = document.getElementById("listaFornecedores");
     const item = document.createElement("li");
-    item.textContent = Nome: ${nome}, E-mail: ${email}, Telefone: ${telefone};
+    item.textContent = `Nome: ${nome}, E-mail: ${email}, Telefone: ${telefone}`;
     listaFornecedores.appendChild(item);
 
     document.getElementById("formFornecedores").reset();
@@ -72,7 +72,7 @@ function adicionarFuncionario() {
 
     const listaFuncionarios = document.getElementById("listaFuncionarios");
     const item = document.createElement("li");
-    item.textContent = Nome: ${nome}, E-mail: ${email}, Telefone: ${telefone};
+    item.textContent = `Nome: ${nome}, E-mail: ${email}, Telefone: ${telefone}`;
     listaFuncionarios.appendChild(item);
 
     document.getElementById("formFuncionarios").reset();
@@ -93,7 +93,7 @@ function adicionarBanco() {
 
     const listaBancos = document.getElementById("listaBancos");
     const item = document.createElement("li");
-    item.textContent = Nome: ${nome}, Conta: ${numeroConta}, Banco: ${instituicao}, CPF/CNPJ: ${cpfCnpj}, Valor: R$ ${parseFloat(valorPagamento).toFixed(2)};
+    item.textContent = `Nome: ${nome}, Conta: ${numeroConta}, Banco: ${instituicao}, CPF/CNPJ: ${cpfCnpj}, Valor: R$ ${parseFloat(valorPagamento).toFixed(2)}`;
     listaBancos.appendChild(item);
 
     document.getElementById("formBancos").reset();
